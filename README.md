@@ -57,6 +57,19 @@ We use the validation split of the publicly available Electric Power Fitting Dat
 
 The same validation split and evaluation protocol are used for both the baseline model and TSTR-KD to ensure a fair comparison. Please refer to the original dataset documentation and applicable data usage terms.
 
+## Experimental Environment
+
+The experiments were conducted using the following software environment and dependencies.
+
+| Component | Version |
+|---|---|
+| Python | 3.8 |
+| PyTorch | 1.11.0 |
+| CUDA | 11.3 |
+| NumPy | 1.21.2 |
+| OpenCV | 4.10.0 |
+| pycocotools | 2.0.7 |
+
 ## Evaluation
 
 Evaluation scripts, model configurations, and environment requirements will be provided to facilitate reproducibility.
