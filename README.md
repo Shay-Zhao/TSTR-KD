@@ -30,20 +30,23 @@ The reported results summarize three experimental runs for each method. Mean val
 
 ## Pretrained Weights
 
-Pretrained checkpoints for the baseline model and TSTR-KD will be released to support reproducibility and evaluation.
+Pretrained checkpoints for the baseline model and TSTR-KD are available for model evaluation and research reproducibility.
+
+All six checkpoints can be downloaded from the [TSTR-KD Pretrained Weights Release (v1.0.0)](https://github.com/ncepuzzy/TSTR-KD/releases/tag/v1.0.0).
 
 | Model | Run | Download |
 |---|---|---|
-| Baseline | Run 1 | To be released |
-| Baseline | Run 2 | To be released |
-| Baseline | Run 3 | To be released |
-| TSTR-KD | Run 1 | To be released |
-| TSTR-KD | Run 2 | To be released |
-| TSTR-KD | Run 3 | To be released |
+| Baseline | Run 1 | [baseline_run1.pt](https://github.com/ncepuzzy/TSTR-KD/releases/download/v1.0.0/baseline_run1.pt) |
+| Baseline | Run 2 | [baseline_run2.pt](https://github.com/ncepuzzy/TSTR-KD/releases/download/v1.0.0/baseline_run2.pt) |
+| Baseline | Run 3 | [baseline_run3.pt](https://github.com/ncepuzzy/TSTR-KD/releases/download/v1.0.0/baseline_run3.pt) |
+| TSTR-KD | Run 1 | [tstr_kd_run1.pt](https://github.com/ncepuzzy/TSTR-KD/releases/download/v1.0.0/tstr_kd_run1.pt) |
+| TSTR-KD | Run 2 | [tstr_kd_run2.pt](https://github.com/ncepuzzy/TSTR-KD/releases/download/v1.0.0/tstr_kd_run2.pt) |
+| TSTR-KD | Run 3 | [tstr_kd_run3.pt](https://github.com/ncepuzzy/TSTR-KD/releases/download/v1.0.0/tstr_kd_run3.pt) |
+
+The released checkpoints correspond to the experimental runs reported in the results section. Please use the corresponding model configuration and evaluation protocol when reproducing the reported results.
 
 ## Validation Dataset
 
-## Validation Dataset
 
 We use the validation split of the publicly available Electric Power Fitting Dataset (EPFD) to evaluate the baseline model and TSTR-KD.
 
