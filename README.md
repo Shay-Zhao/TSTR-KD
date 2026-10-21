@@ -69,6 +69,10 @@ Evaluation scripts, model configurations, and environment requirements will be p
 
 Detailed instructions and executable commands will be added with the released evaluation code.
 
+## Code Availability
+
+The source code of TSTR-KD will be publicly released upon acceptance of the paper. Currently, this repository provides the pretrained model weights and experimental results. The source code and implementation details will be made available to facilitate reproducibility after acceptance.
+
 ## Citation
 
 The full citation will be added when the publication details are finalized.
