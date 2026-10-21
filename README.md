@@ -57,30 +57,60 @@ We use the validation split of the publicly available Electric Power Fitting Dat
 
 The same validation split and evaluation protocol are used for both the baseline model and TSTR-KD to ensure a fair comparison. Please refer to the original dataset documentation and applicable data usage terms.
 
-## Experimental Environment
-
-The experiments were conducted using the following software environment and dependencies.
-
-| Component | Version |
-|---|---|
-| Python | 3.8 |
-| PyTorch | 1.11.0 |
-| CUDA | 11.3 |
-| NumPy | 1.21.2 |
-| OpenCV | 4.10.0 |
-| pycocotools | 2.0.7 |
-
 ## Evaluation
 
-Evaluation scripts, model configurations, and environment requirements will be provided to facilitate reproducibility.
+Evaluation requires the YOLOv7 codebase. Copy the released `test_epfd.py` and the complete `evaluation/` directory into the YOLOv7 repository root, alongside `models/` and `utils/`:
 
-1. Download the pretrained weights.
-2. Download and prepare the validation dataset.
-3. Install the required dependencies.
-4. Load the corresponding model configuration.
-5. Run evaluation and obtain mAP, AP50, and AP75.
+```text
+yolov7/
+├── models/
+├── utils/
+├── test_epfd.py
+└── evaluation/
+    ├── validate_epfd.py
+    ├── coco_metrics.py
+    ├── checkpoints.json
+    ├── dataset_reference.json
+    └── source_reference.json
+```
 
-Detailed instructions and executable commands will be added with the released evaluation code.
+### Preparation
+
+Install the YOLOv7 dependencies and the COCO evaluation package:
+
+```bash
+pip install -r requirements.txt
+pip install pycocotools==2.0.7
+```
+
+Place the six released checkpoints in `weights/`. Prepare the original EPFD validation images and corresponding YOLO-format labels as follows:
+
+```text
+datasets/EPFD/images/val/
+datasets/EPFD/labels/val/
+```
+
+### Evaluation Commands
+
+Run the following commands from the YOLOv7 repository root using trusted released checkpoints.
+
+Evaluate a baseline checkpoint:
+
+```bash
+python test_epfd.py --weights weights/baseline_run1.pt --data-root datasets/EPFD --device 0 --output results/baseline_run1 --allow-different-source --trust-checkpoints
+```
+
+Evaluate a distilled checkpoint:
+
+```bash
+python test_epfd.py --weights weights/tstr_kd_run1.pt --data-root datasets/EPFD --device 0 --output results/tstr_kd_run1 --allow-different-source --trust-checkpoints
+```
+
+Replace `run1` with `run2` or `run3` in both the checkpoint path and output directory to evaluate the remaining checkpoints.
+
+Evaluation defaults to a 640 × 640 input resolution, a batch size of 8, and FP16 inference on GPU. Results, including mAP, AP50, and AP75, are saved in the specified output directory.
+
+`--allow-different-source` permits evaluation with source code differing from the historical version and marks results as `non_reference`. Compatibility and full-dataset accuracy with an unmodified official YOLOv7 checkout have not yet been fully verified.
 
 ## Code Availability
 
