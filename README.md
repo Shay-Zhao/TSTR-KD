@@ -108,9 +108,6 @@ python test_epfd.py --weights weights/tstr_kd_run1.pt --data-root datasets/EPFD 
 
 Replace `run1` with `run2` or `run3` in both the checkpoint path and output directory to evaluate the remaining checkpoints.
 
-Evaluation defaults to a 640 × 640 input resolution, a batch size of 8, and FP16 inference on GPU. Results, including mAP, AP50, and AP75, are saved in the specified output directory.
-
-`--allow-different-source` permits evaluation with source code differing from the historical version and marks results as `non_reference`. Compatibility and full-dataset accuracy with an unmodified official YOLOv7 checkout have not yet been fully verified.
 
 ## Code Availability
 
