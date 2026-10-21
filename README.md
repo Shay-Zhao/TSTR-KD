@@ -111,7 +111,7 @@ Replace `run1` with `run2` or `run3` in both the checkpoint path and output dire
 
 ## Code Availability
 
-The source code of TSTR-KD will be publicly released upon acceptance of the paper. Currently, this repository provides the pretrained model weights and experimental results. The source code and implementation details will be made available to facilitate reproducibility after acceptance.
+A standalone EPFD evaluation script is provided in this repository. The complete source code of TSTR-KD, including the full implementation and training pipeline, will be publicly released upon acceptance of the paper.
 
 ## Citation
 
