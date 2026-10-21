@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Historical baseline and distillation evaluations used different versions of three model source files. Strict source verification requires the matching version for the selected checkpoint group.",
+    "Evaluate baseline_selected and distill_configs_seed1 in separate Python processes using their corresponding source versions; importing one version and then switching it within the same process is not a valid source check.",
+    "Only relative inference-source paths and historical SHA-256 values are included. Dataset YAML paths and the historical evaluation entry point are intentionally excluded."
+  ],
+  "files": {
+    "models/EfficientFormerV2.py": "68458d40da2bb8c4b8e70079db0db9506a14cee148009544d339ccde97dd5d8f",
+    "models/__init__.py": "0486028fa4d1cc658211b606e5935a4c74386a6e9cf5055b812f3484b1b46e57",
+    "models/afpn.py": "807749e2dc7e500b894b4a126e8a5a7f88852b909297f406ce68408a6f59043e",
+    "models/efficientViT.py": "65efddd143a635edeb6099445ebed4eb64ef0b1e9ea5a4eae4fa7badae100506",
+    "models/fasternet.py": "b774027def9b0bf637559e208d2f6762e2ebb56a0980ed3afd9f6b77a8944cb9",
+    "utils/activations.py": "0b9b091d4a84054d2e1cde2938c0458b5c65c65d354d5da5d6216ed1c47f6387",
+    "utils/datasets.py": "3cb512907f2dc94b711158dd0f2ddc30c48f037723a40848e4de4978cbc3c1d6",
+    "utils/general.py": "4cbed7cd3a3ea338d191b9379351a8c21a37003e90e1a82d32d8be4b48d71c25",
+    "utils/torch_utils.py": "ef12f7b92960e56f4f09ed9a6f56b2097684d4c13a5e9eccc3612d19ef89f3dc"
+  },
+  "groups": {
+    "baseline_selected": {
+      "files": {
+        "models/common.py": "d78ac3736a043896263dc4761508490e362faa047a23abd74a3fe248601cd4bc",
+        "models/experimental.py": "473b8756566533f197754f8530a8083f2f3da3245d2b36fcaa9374afdbd11caa",
+        "models/yolo.py": "9ffb18cbfbac443d7cd510c33b26ae457fc80fdf6dfdfa9ebef200d54e298b92"
+      }
+    },
+    "distill_configs_seed1": {
+      "files": {
+        "models/common.py": "3501324a053b104b928f867b42c24514f9f561890c2d4db54ca042970f67cf8a",
+        "models/experimental.py": "0583eb39fddb4dc13b0f59c23163f1c52c760bf13f6ffa90a576e5d18d44408c",
+        "models/yolo.py": "086e3e7fbffe9a08d0e8760702a2e6ba24e10a879afe21c91948463d8c972b36"
+      }
+    }
+  }
+}

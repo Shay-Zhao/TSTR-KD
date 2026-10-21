@@ -1,0 +1,26 @@
+{
+  "images": 468,
+  "annotations": 4100,
+  "image_label_bytes_sha256": "7428742a00a920f3b3c09f40166b32ee3f6da690fec94a7e754c3400e1b92f95",
+  "coco_gt_semantic_sha256": "7c91029876866e40d1af72680b2633bbd5a685d072106acc2069f82c3cea5923",
+  "class_names": [
+    "ball eyes",
+    "shackle",
+    "yoke plate",
+    "adjusting plate",
+    "bag type suspension clamp",
+    "preformed helical suspension clamp",
+    "tension clamp",
+    "parallel groove clamp",
+    "vibration damper",
+    "grading ring",
+    "spacer",
+    "eye link",
+    "socket clevis",
+    "clevis",
+    "right angle clevis",
+    "guy clip",
+    "U-bolt",
+    "wedge clamp"
+  ]
+}

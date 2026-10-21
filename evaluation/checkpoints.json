@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "notes": [
+    "Expected metrics are percentages from historical COCO bbox evaluations with custom area thresholds of 64^2 and 192^2 square pixels in original-image coordinates.",
+    "baseline_selected is a user-selected subset of baseline runs with training seeds 88, 110 and 220; it is not documented as a prospectively fixed three-run experiment.",
+    "distill_configs_seed1 contains three different configurations (B05, B10 and B07), all trained with seed 1. Their dispersion must not be reported as repeated-seed uncertainty for one fixed method.",
+    "The saved training configuration describes B05, B10 and B07 as S3 (ground-truth-region weighted residual) experiments, not learned-mask CASMD. These checkpoints are not independently verified as full TSTR-KD implementations.",
+    "The public filenames below are aliases for byte-identical historical checkpoints. Do not reserialize or substitute files without updating provenance; SHA-256 must match before evaluation.",
+    "The tstr_kd_run filenames are public release aliases, not evidence that the checkpoints implement the complete manuscript method or represent different training seeds; consult configuration and training_seed."
+  ],
+  "checkpoints": [
+    {
+      "id": "baseline_run1",
+      "file": "baseline_run1.pt",
+      "group": "baseline_selected",
+      "training_seed": 88,
+      "configuration": "baseline",
+      "sha256": "343684b5cdf581c1b7d37a1c48ec0fbd993fe50e4a74c95e01625c506c8d7bc2",
+      "expected_percent": {
+        "map50_95": 44.16979143103425,
+        "map50": 73.73942005295608,
+        "map75": 46.711576424737025,
+        "aps": 22.515196808425177,
+        "apm": 43.913577525988806,
+        "apl": 63.79227381971052
+      }
+    },
+    {
+      "id": "baseline_run2",
+      "file": "baseline_run2.pt",
+      "group": "baseline_selected",
+      "training_seed": 110,
+      "configuration": "baseline",
+      "sha256": "75eda05437adb025109ff531e6b7d4608d16bfd8ae5a5b7fd82543dc1fe3ff6c",
+      "expected_percent": {
+        "map50_95": 44.35408663892092,
+        "map50": 73.58740156729523,
+        "map75": 49.02023996225021,
+        "aps": 24.24754994599541,
+        "apm": 43.82333437063341,
+        "apl": 65.32425860827512
+      }
+    },
+    {
+      "id": "baseline_run3",
+      "file": "baseline_run3.pt",
+      "group": "baseline_selected",
+      "training_seed": 220,
+      "configuration": "baseline",
+      "sha256": "94b01a66b062c9f66cbe34e9ddb0ad72e9b67d529a5cba66aaa2499576459d58",
+      "expected_percent": {
+        "map50_95": 44.074452287203385,
+        "map50": 73.49310657918105,
+        "map75": 47.972473360072726,
+        "aps": 23.4604989827322,
+        "apm": 43.720199867689246,
+        "apl": 64.94707631240004
+      }
+    },
+    {
+      "id": "tstr_kd_run1",
+      "file": "tstr_kd_run1.pt",
+      "group": "distill_configs_seed1",
+      "training_seed": 1,
+      "configuration": "B05",
+      "sha256": "57190102572f377b1b16603d51b3b81bbb3ba9700afbc56ffa1e755b62b0796d",
+      "expected_percent": {
+        "map50_95": 46.517483726139055,
+        "map50": 77.53279659171564,
+        "map75": 49.93671895026305,
+        "aps": 26.59088215773584,
+        "apm": 45.6069186560183,
+        "apl": 63.41288226497226
+      }
+    },
+    {
+      "id": "tstr_kd_run2",
+      "file": "tstr_kd_run2.pt",
+      "group": "distill_configs_seed1",
+      "training_seed": 1,
+      "configuration": "B10",
+      "sha256": "ff4dca8a5c35c1039f18d09df047dc4a368946d44b0cd3913ceed265d50bc244",
+      "expected_percent": {
+        "map50_95": 46.50451095719276,
+        "map50": 77.76307582699843,
+        "map75": 49.94801055773827,
+        "aps": 27.42094533911188,
+        "apm": 46.130338382598865,
+        "apl": 66.36855336330359
+      }
+    },
+    {
+      "id": "tstr_kd_run3",
+      "file": "tstr_kd_run3.pt",
+      "group": "distill_configs_seed1",
+      "training_seed": 1,
+      "configuration": "B07",
+      "sha256": "b876d56f4779b24f5d8b28ece572356e2b7e7ed71bc195d60f4ccc20405c8152",
+      "expected_percent": {
+        "map50_95": 46.55317346064852,
+        "map50": 78.21120339525389,
+        "map75": 51.00220121169854,
+        "aps": 26.926942999674264,
+        "apm": 46.05108518658772,
+        "apl": 64.98135744994337
+      }
+    }
+  ]
+}
